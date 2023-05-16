@@ -1,0 +1,44 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+<table>
+    <tr>
+        <td>
+            <div class="block">
+                <img src="{{ posts.photo.url }}" class="photo">
+                <style type="text/css">
+                    .photo {
+                    text-align: center;
+                    width: 500px;
+                    height: 500px;
+                    border: 1px solid #000000;
+                    }
+                </style>
+            </div>
+        </td>
+        <td>
+            <div class="text">
+                <h4>Характеристики:</h4>
+                <p>Название:  {{ posts.name }}</p>
+                <p>Цвет:  {{ posts.color }}</p>
+                <p>Размер:  {{ posts.size }}</p>
+                <p>Вес:  {{ posts.weight }}н</p>
+                <p>Материал:  {{ posts.material }}</p>
+                <style type="text/css">
+                    .text {
+                        margin-left: 350px;
+                        font-size: 20px;
+                        text-align: center;
+                    }
+                </style>
+
+            </div>
+        </td>
+    </tr>
+</table>
+{% endblock %}
+

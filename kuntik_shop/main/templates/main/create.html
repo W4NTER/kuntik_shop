@@ -1,0 +1,19 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+Мастерская
+{% endblock%}
+
+{% block content %}
+        <div>
+            <h1>Выберите нужные параметры</h1>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.color }} <br>
+                {{ form.material }} <br>
+                {{ form.size }} <br>
+                {{ form.options }} <br>
+                <button class="btn btn-success" type="submit">Оформить заказ</button>
+            </form>
+        </div>
+{% endblock %}
